@@ -1,0 +1,134 @@
+.message {
+    padding: 50px 0;
+    max-width: 1000px;
+    margin: 0 auto;    
+    .content {
+        .avatar {
+            width: 50px;
+            height: 50px;
+            object-fit: cover;
+            object-position: center;
+            border-radius: 50%;
+        }
+    }    
+    &-list {
+        .item {
+            border: 1px solid #ddd8d8;
+            border-radius: 5px;
+            padding: 5px;
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+            &.unread {
+                background-color: #e1e1ed;
+            }
+            .name {
+                margin: 0 10px;
+                font-size: 17px;
+                font-weight: bold;
+            }
+        }
+    }
+    &-detail {
+        .header {
+            margin-bottom: 20px;
+            padding: 10px 0;
+            border-bottom: 1px solid black;
+            &__inner {
+                display: flex;
+                justify-content: space-between;
+                align-items: flex-end;
+            }
+            &__left {
+                display: flex;
+                align-items: flex-end;
+            }
+        }
+        .username {
+            margin-right: 20px;
+        }
+        .item {
+            margin-bottom: 15px;
+            display: flex;
+            &.me {
+                justify-content: flex-end;
+                .item__top {
+                    background-color: #e3eded;
+                }
+            }
+            &__inner {
+                width: 80%;
+            }
+            &__top {
+                display: flex;
+                background-color: #e4efe4;
+                padding: 10px;
+                border-radius: 5px;
+                line-height: 1.2;
+            }
+            &__bottom {
+                color: #74808b;
+            }
+            
+            .text {
+                word-break: break-word;
+            }
+        }
+        .content .avatar {
+            margin-right: 5px;
+        }
+        .messageForm {
+            display: flex;
+            width: 100%;
+            margin-top: 20px;
+        }
+        .messages {
+            height: 60vh;
+            overflow-y: scroll;
+        }
+        .messagebox {
+            width: calc(100% - 70px);
+            height: 100px;
+            outline: unset;
+            padding: 5px;
+            font-size: 16px;
+        }
+        .subBtn {
+            width: 50px;
+            margin-left: 20px;
+        }
+        .reload {
+            background-color: white;
+            border: unset;
+            color: #5FCDCD;
+            width: 24px;
+            height: 21px;
+            padding: 0;
+            svg {
+                fill: currentColor;
+            }
+        }        
+    }
+    .c-product {
+        display: block;
+        margin: 0 10px 0 0;
+        &__img img  {
+            width: 150px;
+            height: 100px;
+        }
+    }
+    @media screen and (max-width: 768px) {
+        padding: 30px 20px;
+        &-detail {
+            .messagebox {
+                height: 40px;
+            }
+            .messages {
+                height: 55vh;
+            }
+            .c-product {
+                width: auto;
+            }
+        }
+    }
+}

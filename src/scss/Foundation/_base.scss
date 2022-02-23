@@ -1,0 +1,26 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: $font_Noto;
+    font-size: 16px;
+    color: #000000;
+    overflow-x: hidden;
+}
+
+button {
+    letter-spacing: 2px;
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+    color: #000000;
+}

@@ -1,0 +1,28 @@
+//メディアクエリをmixin化
+$breakpoints: ( 'max374': 'only screen and (max-width: 374px)', 'max1060': 'only screen and (max-width: 1060px)', 'max1160': 'only screen and (max-width: 1160px)', 'sp': 'only screen and (max-width: 768px)', 'max980': 'print,screen and (max-width: 980px)', 'tb': 'print,screen and (max-width: 1280px)', 'pc': 'print,screen and (min-width: 769px)') !default;
+@mixin mq($breakpoint: md) {
+    @media #{map-get($breakpoints, $breakpoint)} {
+        @content;
+    }
+}
+
+// pc
+$baseFontSizePC: 16;
+@function remPC($pixels) {
+    @return $pixels / $baseFontSizePC * 1rem;
+}
+
+@mixin icon_img($w: 15px, $h: 15px, $i: "assets/img/common/logo.svg") {
+    content: "";
+    display: inline-block;
+    background: url($i) top center/cover;
+    width: $w;
+    height: $h;
+    @content;
+}
+
+@mixin hover_btn($opacity:0.8) {
+    transform: translateY(-2px);
+    opacity: 0.8;
+    @content;
+}
